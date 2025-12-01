@@ -1,10 +1,5 @@
-const request = require('supertest');
-const app = require('../app');
+const { addition } = require("../app");
 
-describe('GET /', () => {
-  it('should return Hello World', async () => {
-    const res = await request(app).get('/');
-    expect(res.statusCode).toBe(200);
-    expect(res.body.message).toBe('Hello World');
-  });
+test("addition 2 + 3 = 5", () => {
+    expect(addition(2, 3)).toBe(5);
 });
