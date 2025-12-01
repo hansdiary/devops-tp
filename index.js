@@ -1,8 +1,6 @@
-const express = require('express');
-const app = express();
+const app = require('./app');
 const port = 3000;
 
-app.get('/', (req, res) => res.json({ message: 'Hello World' }));
-app.get('/date', (req, res) => res.json({ date: new Date() }));
-
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
